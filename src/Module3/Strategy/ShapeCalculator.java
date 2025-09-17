@@ -12,7 +12,7 @@ public class ShapeCalculator {
         this.strategy=strategy;
     }
 
-    public double calcuclate(){
+    public double calculate(){
         return strategy.calculateArea();
     }
 
