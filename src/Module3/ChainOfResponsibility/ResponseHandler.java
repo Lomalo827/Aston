@@ -7,10 +7,10 @@ public abstract class ResponseHandler {
         this.next=nextHandler;
     }
 
-    public void checkNext(Resposne resposne){
+    public void checkNext(Response response){
         if (next!=null){
-            next.handle(resposne);
+            next.handle(response);
         }
     }
-    public abstract void handle(Resposne resposne);
+    public abstract void handle(Response response);
 }
