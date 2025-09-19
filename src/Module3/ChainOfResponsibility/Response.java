@@ -1,10 +1,10 @@
 package Module3.ChainOfResponsibility;
 
-public class Resposne {
+public class Response {
     private String status;
     private int code;
 
-    public Resposne(String status, int code) {
+    public Response(String status, int code) {
         this.status = status;
         this.code = code;
     }
