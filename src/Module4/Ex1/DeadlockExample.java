@@ -1,6 +1,6 @@
 package Module4.Ex1;
 
-public class DeadLockExample {
+public class DeadlockExample {
     private static final Object lock1 = new Object();
     private static final Object lock2 = new Object();
 

@@ -3,22 +3,29 @@ package Module4.Ex1;
 public class Main {
     public static void main(String[] args) {
 
-        DeadLockExample deadLockExample = new DeadLockExample();
-
-        Thread DeadLockthread1 = new Thread(()->{
+        DeadlockExample deadLockExample = new DeadlockExample();
+        Thread deadlockthread1 = new Thread(()->{
            while (true){
                deadLockExample.method1();
            }
         });
-
-        Thread DeadLockthread2 = new Thread(()->{
+        Thread deadlockthread2 = new Thread(()->{
            while (true){
                deadLockExample.method2();
            }
         });
 
-        DeadLockthread1.start();
-        DeadLockthread2.start();
+//        deadlockthread1.start();
+//        deadlockthread2.start();
+
+
+        LivelockExample example = new LivelockExample();
+
+        Thread livelockthread1 = new Thread(example::method1);
+        Thread livelockthread2 = new Thread(example::method2);
+
+        livelockthread1.start();
+        livelockthread2.start();
 
     }
 }
