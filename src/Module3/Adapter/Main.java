@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class Main {
     public static void main(String[] args){
 
-        HashMap<Integer,String> bucket = new HashMap<>();
+        HashMap<Integer,String> bucket;
 
         ServiceAnswer serviceAnswer= new ServiceAnswer(1,"SUCCESS");
         AnswerStorage answerStorage = new StorageAdapter(serviceAnswer);
